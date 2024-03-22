@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
  
 
 def pumpOn():
-    relay1 = 23
+    relay1 = 2
     GPIO.setwarnings(False)
 
     GPIO.setmode(GPIO.BCM)
@@ -32,11 +32,11 @@ while True:
     
     print("Moisture level:", moisture)
     
-    if moisture < 434:
+    if moisture == int:
        print("Moisture level is above 60%. No need to water.") 
        pumpOn()
           
-       if moisture > 434:
+       if moisture == int:
           print("Moisture level is below 20%. Watering....")
           pumpOff()
       
