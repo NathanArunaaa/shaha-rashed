@@ -26,7 +26,7 @@ while True:
     
     print("Moisture level:", moisture)
     
-    if moisture >= 434:
+    if moisture > 434:
        print("Moisture level is above 60%. No need to water.") 
        pumpOff()
        
