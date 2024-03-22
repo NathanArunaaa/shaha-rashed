@@ -22,12 +22,13 @@ while True:
     
     ser = serial.Serial('/dev/ttyACM0', 9600)
     data = ser.readline().decode('latin-1').strip()
-    print(data)
+    moisture = int(data)
+    print(moisture)
     
-    if data >=  400:
+    if moisture >=  400:
         pumpOn()
         
-    if data < 300:
+    if moisture < 300:
         pumpOff()
         
     else:
