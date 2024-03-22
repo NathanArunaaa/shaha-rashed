@@ -2,17 +2,24 @@
 import serial
 import time
 import RPi.GPIO as GPIO
-
-GPIO.setup(relay1, GPIO.OUT)
+ 
 
 def pumpOn():
     relay1 = 23
+    GPIO.setwarnings(False)
+
     GPIO.setmode(GPIO.BCM)
+    GPIO.setup(relay1, GPIO.OUT)
+
     GPIO.output(relay1, GPIO.LOW)
     
 def pumpOff():
     relay1 = 23
+    GPIO.setwarnings(False)
+
     GPIO.setmode(GPIO.BCM)
+    GPIO.setup(relay1, GPIO.OUT)
+
     GPIO.output(relay1, GPIO.HIGH)
 
 time.sleep(1)
