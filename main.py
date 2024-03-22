@@ -23,19 +23,22 @@ while True:
     ser = serial.Serial('/dev/ttyACM0', 9600)
     data = ser.readline().decode('latin-1').strip()
     moisture = int(data)
+    
     print("Moisture level:", moisture)
+    
     if moisture >= 434:
        print("Moisture level is above 60%. No need to water.") 
        pumpOff()
-    elif:
-       moisture < 434:
-           print("Moisture level is below 20%. Watering....")
-           pumpOn()
+       
+    if: moisture < 434:
+        print("Moisture level is below 20%. Watering....")
+        pumpOn()
+        
     else: 
-           print("Moisture level is between 20% and 60%. No need to water.")
-           pumpOff()
+        print("Moisture level is between 20% and 60%. No need to water.")
+        pumpOff()
            
-           time.sleep(5) 
+        time.sleep(5) 
 
  
 
