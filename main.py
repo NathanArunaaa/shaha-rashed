@@ -27,7 +27,7 @@ while True:
     if data >=  400:
         pumpOn()
         
-    if data =< 300:
+    if data < 300:
         pumpOff()
         
     else:
